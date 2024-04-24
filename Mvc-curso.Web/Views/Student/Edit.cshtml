@@ -1,0 +1,20 @@
+﻿@model Mvc_curso.Domain.Entities.Student;
+
+<h1>Form Edit</h1>
+
+<form asp-action="Update" asp-controller="Student" method="post">
+    <input asp-for="Id" type="number" hidden/>
+    <div class="mb-3">
+        <input asp-for="FullName" type="type" class="form-control" placeholder="Full Name" />
+    </div>
+    <div class="mb-3">
+        <input asp-for="Age" type="type" class="form-control" placeholder="Age" />
+    </div>
+    <div class="mb-3">
+        <input asp-for="Country" type="type" class="form-control" placeholder="Country" />
+    </div>
+    <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-info">Update</button>
+        <a asp-controller="Student" asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>
